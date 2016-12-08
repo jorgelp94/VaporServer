@@ -9,7 +9,7 @@ drop.get { req in
 }
 
 drop.get("/") { request in
-  return "Hello World"
+  return try drop.view.make("welcome.html")
 }
 
 drop.get("/name", ":name") { request in
